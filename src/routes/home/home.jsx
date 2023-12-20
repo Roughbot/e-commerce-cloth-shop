@@ -1,34 +1,40 @@
+import { Outlet } from "react-router-dom";
 import Directory from "../../components/directory/directory";
 
 const Home = () => {
   const containers = [
     {
       id: 1,
-      title: "HATS",
+      title: "hats",
       imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
     },
     {
       id: 2,
-      title: "JACKETS",
+      title: "jackets",
       imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
     },
     {
       id: 3,
-      title: "SNEAKERS",
+      title: "sneakers",
       imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
     },
     {
       id: 4,
-      title: "WOMENS",
+      title: "womens",
       imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
     },
     {
       id: 5,
-      title: "MENS",
+      title: "",
       imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
     },
   ];
-  return <Directory containers={containers} />;
+  return (
+    <div>
+      <Directory containers={containers} />
+      <Outlet />
+    </div>
+  );
 };
 
 export default Home;
